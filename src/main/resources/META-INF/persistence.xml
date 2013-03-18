@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
+        http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+
+	<persistence-unit name="transactions-optional">
+		<provider>org.datanucleus.api.jpa.PersistenceProviderImpl</provider>
+		<class>sample.datanucleus_sample.model.MyClass</class>
+		<properties>
+			<property name="datanucleus.NontransactionalRead" value="true" />
+			<property name="datanucleus.NontransactionalWrite" value="true" />
+			<property name="datanucleus.ConnectionURL" value="hbase:dev-cdh-node01:60000" />
+			<property name="datanucleus.autoCreateSchema" value="true" />
+			<property name="datanucleus.validateTables" value="false" />
+			<property name="datanucleus.validateConstraints" value="false" />
+			<property name="datanucleus.DetachAllOnCommit" value="true" />
+			<property name="datanucleus.CopyOnAttach" value="true" />
+			<property name="datanucleus.Optimistic" value="true" />
+		</properties>
+	</persistence-unit>
+</persistence>
