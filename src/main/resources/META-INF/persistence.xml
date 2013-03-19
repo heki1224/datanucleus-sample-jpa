@@ -7,7 +7,7 @@
 
 	<persistence-unit name="transactions-optional">
 		<provider>org.datanucleus.api.jpa.PersistenceProviderImpl</provider>
-		<class>sample.datanucleus_sample.model.MyClass</class>
+		<class>sample.datanucleus_sample.model.User</class>
 		<properties>
 			<property name="datanucleus.NontransactionalRead" value="true" />
 			<property name="datanucleus.NontransactionalWrite" value="true" />
