@@ -10,7 +10,6 @@ import javax.persistence.Version;
 
 import org.datanucleus.api.jpa.annotations.Extension;
 import org.datanucleus.api.jpa.annotations.Extensions;
-import org.datanucleus.api.jpa.annotations.SurrogateVersion;
 
 @Entity
 @Extensions({
