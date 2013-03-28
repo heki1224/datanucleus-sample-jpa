@@ -1,5 +1,6 @@
 package sample.datanucleus_sample.dao;
 
+import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -110,7 +111,7 @@ public class UserDaoTest {
 		try {
 			result = dao.saveThrowException(user);
 		} catch (Exception e) {
-			// TODO: handle exception
+			assertThat(e, instanceOf(RuntimeException.class));
 		}
 		assertThat(result, nullValue());
 
@@ -139,6 +140,7 @@ public class UserDaoTest {
 			result3 = dao.save(result);
 		} catch (JpaOptimisticLockingFailureException e) {
 			LOG.info(e);
+			assertThat(e, instanceOf(JpaOptimisticLockingFailureException.class));
 		}
 		assertThat(result3, nullValue());
 
