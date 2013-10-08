@@ -23,3 +23,7 @@ Licensed under the [Apache License, Version 2.0][Apache]
  
 [Apache]: http://www.apache.org/licenses/LICENSE-2.0
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/heki1224/datanucleus-sample-jpa/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
